@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assistent de tramitació de beques NESE/NEAE 2026-2027 per a orientadors i centres educatius de la província de València.">
+  <title>Assistent Beques NESE · 2026-2027</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">N</div>
+      <div>
+        <div class="brand-title">Assistent Beques NESE</div>
+        <div class="brand-subtitle">Curs 2026–2027 · Província de València</div>
+      </div>
+    </div>
+    <div class="privacy-pill">🔒 Dades en aquest dispositiu</div>
+  </header>
+
+  <main class="app-shell">
+    <section id="home" class="view active">
+      <div class="hero">
+        <div>
+          <span class="eyebrow">ASSISTENT PER A ORIENTACIÓ EDUCATIVA</span>
+          <h1>Tramita una beca NESE<br>pas a pas i sense perdre’t.</h1>
+          <p>Un circuit guiat per revisar l’elegibilitat, l’Annex II, les ajudes de l’Annex III, la reeducació, la documentació i l’enviament final.</p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-label">PUNT CLAVE</div>
+          <strong>No és un formulari de la GVA.</strong>
+          <span>És una eina de suport a la revisió i preparació de l’expedient.</span>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <button class="action-card primary" data-action="new-case">
+          <span class="icon">＋</span>
+          <span><strong>Nou expedient</strong><small>Tramitació guiada, pas a pas</small></span>
+          <span class="arrow">→</span>
+        </button>
+        <button class="action-card" data-action="quick">
+          <span class="icon">⚡</span>
+          <span><strong>Consulta ràpida</strong><small>Comprova un supòsit concret</small></span>
+          <span class="arrow">→</span>
+        </button>
+        <button class="action-card" data-action="checklist">
+          <span class="icon">✓</span>
+          <span><strong>Checklist final</strong><small>Revisa l’expedient abans d’enviar</small></span>
+          <span class="arrow">→</span>
+        </button>
+        <button class="action-card" data-action="sources">
+          <span class="icon">§</span>
+          <span><strong>Fonts i normativa</strong><small>Què sustenta cada regla</small></span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
+
+      <div class="notice info">
+        <strong>Privacitat per disseny.</strong> Aquesta primera versió no envia cap dada a cap servidor ni conté noms d’alumnat. El cas es manté en memòria mentre treballes amb ell.
+      </div>
+    </section>
+
+    <section id="wizard" class="view">
+      <div class="wizard-head">
+        <button class="back" data-action="home">← Inici</button>
+        <div>
+          <span class="eyebrow">NOU EXPEDIENT</span>
+          <h2 id="stepTitle">1. Identificació del supòsit</h2>
+        </div>
+        <div class="step-count"><span id="stepCurrent">1</span>/<span id="stepTotal">7</span></div>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <div id="stepContent" class="step-content"></div>
+      <div class="wizard-actions">
+        <button class="btn secondary" id="prevBtn">← Anterior</button>
+        <button class="btn primary-btn" id="nextBtn">Continuar →</button>
+      </div>
+    </section>
+
+    <section id="result" class="view">
+      <div class="result-head">
+        <div>
+          <span class="eyebrow">RESULTAT DE LA REVISIÓ</span>
+          <h2 id="resultTitle">Informe de revisió</h2>
+          <p class="muted">Resultat orientatiu segons les regles incorporades a l’assistent. La font oficial preval davant qualsevol discrepància.</p>
+        </div>
+        <button class="btn secondary" data-action="new-case">Nou cas</button>
+      </div>
+      <div id="resultContent"></div>
+    </section>
+
+    <section id="sources" class="view">
+      <div class="section-head">
+        <button class="back" data-action="home">← Inici</button>
+        <div><span class="eyebrow">REFERÈNCIES</span><h2>Fonts incorporades</h2></div>
+      </div>
+      <div class="source-list">
+        <article class="source-card"><span class="source-tag">OFICIAL · BOE</span><h3>Resolució / convocatòria NEAE 2026–2027</h3><p>Base per a tipologies, classes d’ajudes, quanties, incompatibilitats i requisits generals de la convocatòria.</p><small>Fitxer de treball: BOE-A-2026-5713.pdf / Convocatoria NEAE 2026_2027 FIRMADA.pdf</small></article>
+        <article class="source-card"><span class="source-tag">OFICIAL · DT VALÈNCIA</span><h3>Instruccions als centres educatius 2026/2027</h3><p>Base operativa per a la província de València: annexos, responsables, terminis, PDF, GUC 1419 i remissió.</p><small>Data màxima indicada per a la remissió: 13 de novembre de 2026.</small></article>
+        <article class="source-card"><span class="source-tag">GUIA DE TREBALL</span><h3>Notes i manual de treball</h3><p>Recull aclariments pràctics de l’orientadora. No preval davant la convocatòria ni les instruccions territorials.</p><small>Qualsevol contradicció s’ha de marcar com a “cal comprovar”.</small></article>
+      </div>
+    </section>
+
+    <section id="checklist" class="view">
+      <div class="section-head"><button class="back" data-action="home">← Inici</button><div><span class="eyebrow">CONTROL FINAL</span><h2>Checklist de remissió</h2></div></div>
+      <div class="checklist-box">
+        <label><input type="checkbox"> Annex I completat i signat pel centre.</label>
+        <label><input type="checkbox"> Annex II completat i signat per orientació.</label>
+        <label><input type="checkbox"> Annex III completat pel centre.</label>
+        <label><input type="checkbox"> Annex IV incorporat si hi ha reeducació o altes capacitats.</label>
+        <label><input type="checkbox"> Annex VI incorporat si hi ha reeducació o altes capacitats.</label>
+        <label><input type="checkbox"> Annex V <strong>no</strong> inclòs en la remissió del centre.</label>
+        <label><input type="checkbox"> Un únic PDF per alumne/a.</label>
+        <label><input type="checkbox"> PDF aplanat/bloquejat.</label>
+        <label><input type="checkbox"> Nom d’arxiu: <code>26EE1-XXXXXX</code>.</label>
+        <label><input type="checkbox"> Mida de cada remesa ≤ 125 MB.</label>
+        <label><input type="checkbox"> Enviament mitjançant GUC 1419 → «Aportació».</label>
+        <label><input type="checkbox"> Evidència de la remissió conservada.</label>
+      </div>
+      <div class="notice warning"><strong>Termini territorial:</strong> 13 de novembre de 2026, segons les instruccions de la Direcció Territorial de València.</div>
+    </section>
+  </main>
+
+  <footer class="footer">Assistent Beques NESE 2026–2027 · Eina de suport professional · No substitueix la normativa ni una resolució administrativa.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
