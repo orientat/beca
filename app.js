@@ -707,11 +707,17 @@ document.addEventListener('click', e => {
     show('home');
   }
 
-  if (action === 'new-case' || action === 'quick') {
+  if (action === 'new-case') {
     state.step = 1;
+    state.total = steps.length;
     state.data = {};
     renderCurrent();
+    document.querySelector('#wizard .eyebrow').textContent = 'NOU EXPEDIENT';
     show('wizard');
+  }
+
+  if (action === 'quick') {
+    show('quickConsult');
   }
 
   if (action === 'checklist') {
