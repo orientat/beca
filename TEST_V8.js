@@ -19,9 +19,9 @@ close('AL 2x45/1.5h', pct(1.5,2,45), 100);
 const appSrc = fs.readFileSync(__dirname + '/app.js', 'utf8');
 const htmlSrc = fs.readFileSync(__dirname + '/index.html', 'utf8');
 assert(/if\s*\(action\s*===\s*'new-case'\)/.test(appSrc), 'Nou expedient ha de tindre un controlador propi.');
-assert(/if\s*\(action\s*===\s*'quick'\)\s*\{\s*show\('quickConsult'\);\s*\}/.test(appSrc), 'Consulta ràpida ha d'obrir la vista específica.');
+assert(/if\s*\(action\s*===\s*'quick'\)\s*\{\s*show\('quickConsult'\);\s*\}/.test(appSrc), "Consulta ràpida ha d'obrir la vista específica.");
 assert(!/action\s*===\s*'new-case'\s*\|\|\s*action\s*===\s*'quick'/.test(appSrc), 'Consulta ràpida no ha de compartir el controlador de nou expedient.');
 assert(/<section id="quickConsult" class="view">/.test(htmlSrc), 'Ha d'existir la vista específica de consulta ràpida.');
-assert(/DOCUMENTACIÓ/.test(htmlSrc) && /REEDUCACIÓ/.test(htmlSrc) && /REMISSIÓ/.test(htmlSrc), 'La consulta ràpida ha d'incloure els tres blocs d'orientació.');
+assert(/DOCUMENTACIÓ/.test(htmlSrc) && /REEDUCACIÓ/.test(htmlSrc) && /REMISSIÓ/.test(htmlSrc), "La consulta ràpida ha d'incloure els tres blocs d'orientació.");
 
 console.log('V8 QA: OK — annexos, càlculs PT/AL i separació de consulta ràpida.');
