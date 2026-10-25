@@ -79,6 +79,23 @@
       </div>
     </section>
 
+    <section id="quickConsult" class="view">
+      <div class="section-head">
+        <button class="back" data-action="home">← Inici</button>
+        <div><span class="eyebrow">CONSULTA RÀPIDA</span><h2>Comprovació d’un supòsit</h2><p class="muted">Tria un tema per veure una orientació breu. Aquesta consulta no calcula l’elegibilitat d’un expedient.</p></div>
+      </div>
+      <div class="cards-grid quick-topics">
+        <button class="action-card" data-quick-topic="documents"><span class="icon">▤</span><span><strong>Quins annexos revisar?</strong><small>Documentació base i específica</small></span><span class="arrow">→</span></button>
+        <button class="action-card" data-quick-topic="reeducation"><span class="icon">◎</span><span><strong>Hi ha reeducació?</strong><small>Comprovacions prèvies</small></span><span class="arrow">→</span></button>
+        <button class="action-card" data-quick-topic="submission"><span class="icon">✓</span><span><strong>Abans de remetre</strong><small>Controls de presentació</small></span><span class="arrow">→</span></button>
+      </div>
+      <div id="quickAnswer" class="result-section" aria-live="polite">
+        <p class="muted">Selecciona un tema per consultar les comprovacions corresponents.</p>
+      </div>
+      <div class="notice warning"><strong>Important:</strong> orientació basada en la informació incorporada a aquesta eina. Comprova sempre la convocatòria i les instruccions oficials vigents.</div>
+      <div class="wizard-actions"><button class="btn primary-btn" data-action="new-case">Obrir nou expedient →</button></div>
+    </section>
+
     <section id="result" class="view">
       <div class="result-head">
         <div>
