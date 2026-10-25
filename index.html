@@ -10,7 +10,7 @@
 <body>
   <header class="topbar">
     <div class="brand">
-      <div class="brand-mark">N</div>
+      <div class="brand-mark">B</div>
       <div>
         <div class="brand-title">Assistent Beques NESE</div>
         <div class="brand-subtitle">Curs 2026–2027 · Província de València</div>
@@ -28,7 +28,7 @@
           <p>Un circuit guiat per revisar l’elegibilitat, l’Annex II, les ajudes de l’Annex III, la reeducació, la documentació i l’enviament final.</p>
         </div>
         <div class="hero-card">
-          <div class="hero-card-label">PUNT CLAVE</div>
+          <div class="hero-card-label">CRITERI DE TREBALL</div>
           <strong>No és un formulari de la GVA.</strong>
           <span>És una eina de suport a la revisió i preparació de l’expedient.</span>
         </div>
@@ -91,6 +91,18 @@
       <div id="resultContent"></div>
     </section>
 
+    <section id="annexAssistant" class="view">
+      <div class="section-head"><button class="back" data-action="annex-home">← Inici</button><div><span class="eyebrow">ASSISTENT D’ANNEX</span><h2 id="annexTitle">Annex</h2><p id="annexRole" class="muted"></p></div><div class="step-count" id="annexStepCount">1/1</div></div>
+      <div class="progress"><div id="annexProgress"></div></div>
+      <div id="annexContent" class="step-content"></div>
+      <div class="wizard-actions"><button class="btn secondary" id="annexPrev" data-action="annex-prev">← Anterior</button><button class="btn primary-btn" id="annexNext" data-action="annex-next">Continuar →</button></div>
+    </section>
+
+    <section id="annexDone" class="view">
+      <div class="section-head"><div><span class="eyebrow">ANNEX PREPARAT</span><h2>Revisió completada</h2></div></div>
+      <div id="annexSummary" class="result-section"></div>
+    </section>
+
     <section id="sources" class="view">
       <div class="section-head">
         <button class="back" data-action="home">← Inici</button>
@@ -124,6 +136,8 @@
   </main>
 
   <footer class="footer">Assistent Beques NESE 2026–2027 · Eina de suport professional · No substitueix la normativa ni una resolució administrativa.</footer>
+  <script src="rules.js"></script>
+  <script src="annex.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
