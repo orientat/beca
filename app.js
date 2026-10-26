@@ -724,6 +724,10 @@ document.addEventListener('click', e => {
     show('checklist');
   }
 
+  if (action === 'sources') {
+    show('sources');
+  }
+
 });
 
 document.getElementById('prevBtn').onclick = () => {
