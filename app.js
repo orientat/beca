@@ -129,6 +129,13 @@ function bindFields() {
     el.value = state.data[name] ?? '';
 
     el.oninput = () => {
+      if (name === 'birthDate') {
+        const digits = el.value.replace(/\\D/g, '').slice(0, 8);
+        let formatted = digits.slice(0, 2);
+        if (digits.length > 2) formatted += '/' + digits.slice(2, 4);
+        if (digits.length > 4) formatted += '/' + digits.slice(4, 8);
+        el.value = formatted;
+      }
       state.data[name] = el.value;
     };
 
